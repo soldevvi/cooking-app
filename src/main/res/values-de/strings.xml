@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Küchenassistent</string>
+
+    <string name="nav_all">Alle</string>
+    <string name="nav_breakfast">Frühstück</string>
+    <string name="nav_lunch">Mittagessen</string>
+    <string name="nav_dinner">Abendessen</string>
+
+    <string name="choose_language">Sprache</string>
+    <string name="lang_en">English</string>
+    <string name="lang_ru">Русский</string>
+    <string name="lang_de">Deutsch</string>
+
+    <string name="ingredients">Zutaten</string>
+    <string name="steps">Zubereitungsschritte</string>
+    <string name="cooking_time">Kochzeit: %1$s Min.</string>
+    <string name="servings">Portionen: %1$d</string>
+    <string name="category_breakfast">Frühstück</string>
+    <string name="category_lunch">Mittagessen</string>
+    <string name="category_dinner">Abendessen</string>
+
+    <string name="recipe1_name">Klassisches Omelett</string>
+    <string name="recipe1_desc">Ein schnelles und nahrhaftes Frühstück</string>
+    <string name="recipe1_time">10</string>
+    <string name="recipe1_servings">2</string>
+    <string name="recipe1_ingredients">3 Eier\nSalz und Pfeffer\n2 EL Butter\n50g Käse\nFrische Kräuter</string>
+    <string name="recipe1_steps">1. Eier in eine Schüssel aufschlagen, Salz und Pfeffer hinzufügen und gut verquirlen.\n2. Butter in einer Pfanne bei mittlerer Hitze schmelzen.\n3. Eimischung in die Pfanne gießen.\n4. Wenn die Ränder fest werden, diese vorsichtig anheben.\n5. Käse und Kräuter auf eine Hälfte streuen.\n6. Omelett zusammenklappen. Heiß servieren.</string>
+
+    <string name="recipe2_name">Caesar Salat</string>
+    <string name="recipe2_desc">Ein klassischer Salat mit cremigem Dressing</string>
+    <string name="recipe2_time">20</string>
+    <string name="recipe2_servings">4</string>
+    <string name="recipe2_ingredients">1 Kopf Römersalat\n100g Parmesankäse\nCroutons\n3 EL Caesar-Dressing\n1 Knoblauchzehe\nSchwarzer Pfeffer</string>
+    <string name="recipe2_steps">1. Salatblätter waschen, trocknen und in Stücke zupfen.\n2. Salatschüssel mit Knoblauch einreiben.\n3. Salat in die Schüssel geben.\n4. Caesar-Dressing hinzufügen und vorsichtig wenden.\n5. Mit Parmesanspänen und Croutons belegen.\n6. Mit schwarzem Pfeffer würzen. Sofort servieren.</string>
+
+    <string name="recipe3_name">Pasta Carbonara</string>
+    <string name="recipe3_desc">Ein klassisches italienisches Nudelgericht</string>
+    <string name="recipe3_time">30</string>
+    <string name="recipe3_servings">4</string>
+    <string name="recipe3_ingredients">400g Spaghetti\n200g Pancetta oder Speck\n4 Eigelb\n100g Pecorino Romano\n2 Knoblauchzehen\nSchwarzer Pfeffer\nSalz</string>
+    <string name="recipe3_steps">1. Spaghetti in gesalzenem Wasser al dente kochen.\n2. Pancetta mit Knoblauch knusprig braten.\n3. Eigelb mit geriebenem Pecorino mischen.\n4. Pasta abgießen, 1 Tasse Kochwasser aufheben.\n5. Pfanne vom Herd nehmen, Pasta zum Pancetta geben.\n6. Eimischung hinzufügen, schnell rühren und Kochwasser für die cremige Sauce verwenden.\n7. Mit Pfeffer würzen. Sofort servieren.</string>
+
+    <string name="search_hint">Rezepte suchen…</string>
+    <string name="no_results">Keine Rezepte gefunden</string>
+    <string name="back">Zurück</string>
+    <string name="splash_tagline">Entdecken Sie Weltküchen</string>
+</resources>

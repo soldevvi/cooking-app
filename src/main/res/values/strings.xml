@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Culinary Assistant</string>
+
+    <!-- Navigation -->
+    <string name="nav_all">All</string>
+    <string name="nav_breakfast">Breakfast</string>
+    <string name="nav_lunch">Lunch</string>
+    <string name="nav_dinner">Dinner</string>
+
+    <!-- Language -->
+    <string name="choose_language">Language</string>
+    <string name="lang_en">English</string>
+    <string name="lang_ru">Русский</string>
+    <string name="lang_de">Deutsch</string>
+
+    <!-- Detail screen -->
+    <string name="ingredients">Ingredients</string>
+    <string name="steps">Preparation Steps</string>
+    <string name="cooking_time">Cooking time: %1$s min</string>
+    <string name="servings">Servings: %1$d</string>
+    <string name="category_breakfast">Breakfast</string>
+    <string name="category_lunch">Lunch</string>
+    <string name="category_dinner">Dinner</string>
+
+    <!-- Recipes -->
+    <!-- Breakfast: Omelette -->
+    <string name="recipe1_name">Classic Omelette</string>
+    <string name="recipe1_desc">A quick and nutritious breakfast</string>
+    <string name="recipe1_time">10</string>
+    <string name="recipe1_servings">2</string>
+    <string name="recipe1_ingredients">3 eggs\nSalt and pepper\n2 tbsp butter\n50g cheese\nFresh herbs</string>
+    <string name="recipe1_steps">1. Crack eggs into a bowl, add salt and pepper, whisk well.\n2. Melt butter in a skillet over medium heat.\n3. Pour the egg mixture into the skillet.\n4. As edges set, gently lift them and tilt the pan.\n5. Sprinkle cheese and herbs on one half.\n6. Fold the omelette in half. Serve hot.</string>
+
+    <!-- Lunch: Caesar Salad -->
+    <string name="recipe2_name">Caesar Salad</string>
+    <string name="recipe2_desc">A classic salad with creamy dressing</string>
+    <string name="recipe2_time">20</string>
+    <string name="recipe2_servings">4</string>
+    <string name="recipe2_ingredients">1 head Romaine lettuce\n100g Parmesan cheese\nCroutons\n3 tbsp Caesar dressing\n1 garlic clove\nBlack pepper</string>
+    <string name="recipe2_steps">1. Wash and dry lettuce leaves, tear into pieces.\n2. Rub salad bowl with garlic clove.\n3. Place lettuce in the bowl.\n4. Add Caesar dressing and toss gently.\n5. Top with Parmesan shavings and croutons.\n6. Season with black pepper. Serve immediately.</string>
+
+    <!-- Dinner: Pasta Carbonara -->
+    <string name="recipe3_name">Pasta Carbonara</string>
+    <string name="recipe3_desc">A classic Italian pasta dish</string>
+    <string name="recipe3_time">30</string>
+    <string name="recipe3_servings">4</string>
+    <string name="recipe3_ingredients">400g spaghetti\n200g pancetta or bacon\n4 egg yolks\n100g Pecorino Romano\n2 garlic cloves\nBlack pepper\nSalt</string>
+    <string name="recipe3_steps">1. Cook spaghetti in salted boiling water until al dente.\n2. Fry pancetta with garlic until crispy.\n3. Mix egg yolks with grated Pecorino Romano.\n4. Drain pasta, reserve 1 cup of pasta water.\n5. Remove pan from heat, add pasta to pancetta.\n6. Add egg mixture, toss quickly adding pasta water to create creamy sauce.\n7. Season with black pepper. Serve immediately.</string>
+
+    <!-- UI -->
+    <string name="search_hint">Search recipes…</string>
+    <string name="no_results">No recipes found</string>
+    <string name="back">Back</string>
+    <string name="splash_tagline">Discover World Cuisines</string>
+</resources>

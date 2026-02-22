@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Кулинарный Помощник</string>
+
+    <string name="nav_all">Все</string>
+    <string name="nav_breakfast">Завтрак</string>
+    <string name="nav_lunch">Обед</string>
+    <string name="nav_dinner">Ужин</string>
+
+    <string name="choose_language">Язык</string>
+    <string name="lang_en">English</string>
+    <string name="lang_ru">Русский</string>
+    <string name="lang_de">Deutsch</string>
+
+    <string name="ingredients">Ингредиенты</string>
+    <string name="steps">Шаги приготовления</string>
+    <string name="cooking_time">Время приготовления: %1$s мин</string>
+    <string name="servings">Порций: %1$d</string>
+    <string name="category_breakfast">Завтрак</string>
+    <string name="category_lunch">Обед</string>
+    <string name="category_dinner">Ужин</string>
+
+    <!-- Рецепты -->
+    <string name="recipe1_name">Классический Омлет</string>
+    <string name="recipe1_desc">Быстрый и питательный завтрак</string>
+    <string name="recipe1_time">10</string>
+    <string name="recipe1_servings">2</string>
+    <string name="recipe1_ingredients">3 яйца\nСоль и перец\n2 ст.л. сливочного масла\n50г сыра\nСвежая зелень</string>
+    <string name="recipe1_steps">1. Разбить яйца в миску, добавить соль и перец, взбить венчиком.\n2. Растопить масло на сковороде на среднем огне.\n3. Влить яичную смесь на сковороду.\n4. Когда края начнут схватываться, аккуратно подтягивайте их к центру.\n5. Посыпать тёртым сыром и зеленью с одной стороны.\n6. Сложить омлет пополам. Подавать горячим.</string>
+
+    <string name="recipe2_name">Салат Цезарь</string>
+    <string name="recipe2_desc">Классический салат со сливочной заправкой</string>
+    <string name="recipe2_time">20</string>
+    <string name="recipe2_servings">4</string>
+    <string name="recipe2_ingredients">1 кочан салата Романо\n100г сыра Пармезан\nКрутоны\n3 ст.л. соуса Цезарь\n1 зубчик чеснока\nЧёрный перец</string>
+    <string name="recipe2_steps">1. Вымыть и обсушить листья салата, порвать на части.\n2. Натереть миску зубчиком чеснока.\n3. Выложить салат в миску.\n4. Добавить соус Цезарь и аккуратно перемешать.\n5. Посыпать стружкой пармезана и крутонами.\n6. Поперчить. Подавать немедленно.</string>
+
+    <string name="recipe3_name">Паста Карбонара</string>
+    <string name="recipe3_desc">Классическое итальянское блюдо из пасты</string>
+    <string name="recipe3_time">30</string>
+    <string name="recipe3_servings">4</string>
+    <string name="recipe3_ingredients">400г спагетти\n200г панчетты или бекона\n4 яичных желтка\n100г сыра Пекорино Романо\n2 зубчика чеснока\nЧёрный перец\nСоль</string>
+    <string name="recipe3_steps">1. Сварить спагетти в подсоленной воде до состояния аль денте.\n2. Обжарить панчетту с чесноком до хрустящей корочки.\n3. Смешать желтки с тёртым Пекорино.\n4. Слить воду с пасты, сохранив 1 стакан.\n5. Снять сковороду с огня, добавить пасту к панчетте.\n6. Добавить яичную смесь, быстро перемешать, подливая воду для соуса.\n7. Поперчить. Подавать немедленно.</string>
+
+    <string name="search_hint">Поиск рецептов…</string>
+    <string name="no_results">Рецепты не найдены</string>
+    <string name="back">Назад</string>
+    <string name="splash_tagline">Откройте мировые кухни</string>
+</resources>
