@@ -6,6 +6,7 @@ import com.example.cookingapp.models.Recipe;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class RecipeRepository {
 
     private static RecipeRepository instance;
@@ -17,14 +18,12 @@ public class RecipeRepository {
     }
 
     public static RecipeRepository getInstance() {
-        if (instance == null) {
-            instance = new RecipeRepository();
-        }
+        if (instance == null) instance = new RecipeRepository();
         return instance;
     }
 
     private void loadRecipes() {
-        // Recipe 1 - Breakfast
+
         recipes.add(new Recipe(
                 1,
                 "recipe1_name",
@@ -34,10 +33,12 @@ public class RecipeRepository {
                 2,
                 "recipe1_ingredients",
                 "recipe1_steps",
-                R.mipmap.img_omelette
+                R.mipmap.img_omelette,
+                "recipe1_voice_",
+                0
         ));
 
-        // Recipe 2 - Lunch
+
         recipes.add(new Recipe(
                 2,
                 "recipe2_name",
@@ -47,10 +48,12 @@ public class RecipeRepository {
                 4,
                 "recipe2_ingredients",
                 "recipe2_steps",
-                R.mipmap.img_caesar
+                R.mipmap.img_caesar,
+                null,
+                0
         ));
 
-        // Recipe 3 - Dinner
+
         recipes.add(new Recipe(
                 3,
                 "recipe3_name",
@@ -60,7 +63,9 @@ public class RecipeRepository {
                 4,
                 "recipe3_ingredients",
                 "recipe3_steps",
-                R.mipmap.img_carbonara
+                R.mipmap.img_carbonara,
+                null,
+                R.raw.recipe3_video
         ));
     }
 
@@ -70,17 +75,15 @@ public class RecipeRepository {
 
     public List<Recipe> getRecipesByCategory(String category) {
         List<Recipe> filtered = new ArrayList<>();
-        for (Recipe recipe : recipes) {
-            if (recipe.getCategory().equals(category)) {
-                filtered.add(recipe);
-            }
+        for (Recipe r : recipes) {
+            if (r.getCategory().equals(category)) filtered.add(r);
         }
         return filtered;
     }
 
     public Recipe getRecipeById(int id) {
-        for (Recipe recipe : recipes) {
-            if (recipe.getId() == id) return recipe;
+        for (Recipe r : recipes) {
+            if (r.getId() == id) return r;
         }
         return null;
     }

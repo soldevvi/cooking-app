@@ -53,4 +53,12 @@
     <string name="no_results">No recipes found</string>
     <string name="back">Back</string>
     <string name="splash_tagline">Discover World Cuisines</string>
+
+    <!-- НОВОЕ: аудио/видео UI -->
+    <string name="voice_recipe">🎧 Listen to this recipe narration</string>
+    <string name="btn_play_voice">▶ Play</string>
+    <string name="btn_stop_voice">■ Stop</string>
+    <string name="video_recipe">🎬 Recipe Video</string>
+    <string name="btn_video_play">▶ Play Video</string>
+    <string name="btn_video_stop">■ Stop</string>
 </resources>

@@ -45,4 +45,12 @@
     <string name="no_results">Keine Rezepte gefunden</string>
     <string name="back">Zurück</string>
     <string name="splash_tagline">Entdecken Sie Weltküchen</string>
+
+
+    <string name="voice_recipe">🎧 Rezept-Vertonung anhören</string>
+    <string name="btn_play_voice">▶ Abspielen</string>
+    <string name="btn_stop_voice">■ Stoppen</string>
+    <string name="video_recipe">🎬 Rezeptvideo</string>
+    <string name="btn_video_play">▶ Video abspielen</string>
+    <string name="btn_video_stop">■ Stoppen</string>
 </resources>

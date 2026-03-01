@@ -46,4 +46,11 @@
     <string name="no_results">Рецепты не найдены</string>
     <string name="back">Назад</string>
     <string name="splash_tagline">Откройте мировые кухни</string>
+
+    <string name="voice_recipe">🎧 Прослушать озвучку рецепта</string>
+    <string name="btn_play_voice">▶ Воспроизвести</string>
+    <string name="btn_stop_voice">■ Остановить</string>
+    <string name="video_recipe">🎬 Видео рецепта</string>
+    <string name="btn_video_play">▶ Воспроизвести видео</string>
+    <string name="btn_video_stop">■ Остановить</string>
 </resources>

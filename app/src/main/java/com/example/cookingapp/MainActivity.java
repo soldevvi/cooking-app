@@ -2,6 +2,8 @@ package com.example.cookingapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioAttributes;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -18,12 +20,12 @@ import com.example.cookingapp.models.Recipe;
 import com.example.cookingapp.utils.LocaleHelper;
 import com.example.cookingapp.utils.RecipeRepository;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,8 +36,12 @@ public class MainActivity extends AppCompatActivity {
     private TextInputEditText etSearch;
     private ChipGroup chipGroupFilter;
 
+    private SoundPool soundPool;
+    private int soundTransitionId = -1;
+    private boolean soundPoolLoaded = false;
+
     private List<Recipe> allRecipes = new ArrayList<>();
-    private String currentCategory = null; // null = all
+    private String currentCategory = null;
     private String currentSearch = "";
 
     @Override
@@ -48,12 +54,42 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initSoundPool();
         initViews();
         setupRecyclerView();
         setupFilter();
         setupSearch();
         setupLanguageButton();
+        loadRecipes();
+    }
 
+
+    private void initSoundPool() {
+        AudioAttributes audioAttributes = new AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_GAME)
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .build();
+
+        soundPool = new SoundPool.Builder()
+                .setMaxStreams(2)
+                .setAudioAttributes(audioAttributes)
+                .build();
+
+        soundPool.setOnLoadCompleteListener((pool, sampleId, status) -> {
+            if (status == 0) soundPoolLoaded = true;
+        });
+
+        // Загружаем звук перехода из raw/transition_click.wav
+        soundTransitionId = soundPool.load(this, R.raw.transition_click, 1);
+    }
+
+    /**
+     * Воспроизводит короткий звук при переходе на экран рецепта.
+     */
+    private void playTransitionSound() {
+        if (soundPool != null && soundPoolLoaded && soundTransitionId != -1) {
+            soundPool.play(soundTransitionId, 0.7f, 0.7f, 1, 0, 1.0f);
+        }
     }
 
     private void initViews() {
@@ -63,9 +99,12 @@ public class MainActivity extends AppCompatActivity {
         etSearch = findViewById(R.id.etSearch);
         chipGroupFilter = findViewById(R.id.chipGroupFilter);
 
-        // Show current language on button
         String lang = LocaleHelper.getCurrentLanguageCode(this);
         btnLanguage.setText("🌐 " + lang.toUpperCase());
+    }
+
+    private void loadRecipes() {
+        // no-op, called for clarity — data loaded in setupRecyclerView
     }
 
     private void setupRecyclerView() {
@@ -73,9 +112,11 @@ public class MainActivity extends AppCompatActivity {
         int spanCount = getResources().getConfiguration().screenWidthDp >= 600 ? 2 : 1;
         rvRecipes.setLayoutManager(new GridLayoutManager(this, spanCount));
         adapter = new RecipeAdapter(this, new ArrayList<>(allRecipes), recipe -> {
+            playTransitionSound();
             Intent intent = new Intent(this, RecipeDetailActivity.class);
             intent.putExtra("recipe_id", recipe.getId());
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         });
         rvRecipes.setAdapter(adapter);
     }
@@ -116,11 +157,7 @@ public class MainActivity extends AppCompatActivity {
     private void applyFilters() {
         List<Recipe> filtered = new ArrayList<>();
         for (Recipe recipe : allRecipes) {
-            // Category filter
-            if (currentCategory != null && !recipe.getCategory().equals(currentCategory)) {
-                continue;
-            }
-            // Search filter
+            if (currentCategory != null && !recipe.getCategory().equals(currentCategory)) continue;
             if (!currentSearch.isEmpty()) {
                 int nameResId = getResources().getIdentifier(
                         recipe.getNameKey(), "string", getPackageName());
@@ -145,10 +182,7 @@ public class MainActivity extends AppCompatActivity {
 
         int currentIndex = 0;
         for (int i = 0; i < codes.length; i++) {
-            if (codes[i].equals(currentCode)) {
-                currentIndex = i;
-                break;
-            }
+            if (codes[i].equals(currentCode)) { currentIndex = i; break; }
         }
 
         new AlertDialog.Builder(this)
@@ -166,5 +200,14 @@ public class MainActivity extends AppCompatActivity {
         finish();
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (soundPool != null) {
+            soundPool.release();
+            soundPool = null;
+        }
+        super.onDestroy();
     }
 }
