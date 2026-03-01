@@ -33,9 +33,8 @@ public class RecipeRepository {
                 2,
                 "recipe1_ingredients",
                 "recipe1_steps",
-                R.mipmap.img_omelette,
-                "recipe1_voice_",
-                0
+                R.mipmap.img_omelette
+
         ));
 
 
@@ -48,9 +47,7 @@ public class RecipeRepository {
                 4,
                 "recipe2_ingredients",
                 "recipe2_steps",
-                R.mipmap.img_caesar,
-                null,
-                0
+                R.mipmap.img_caesar
         ));
 
 
@@ -63,9 +60,8 @@ public class RecipeRepository {
                 4,
                 "recipe3_ingredients",
                 "recipe3_steps",
-                R.mipmap.img_carbonara,
-                null,
-                R.raw.recipe3_video
+                R.mipmap.img_carbonara
+
         ));
     }
 
