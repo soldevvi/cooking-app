@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- ИЗМЕНЕНИЯ:
-     - Добавлен VideoView + контейнер управления видео (для рецепта 3 — Карбонара)
-     - Добавлена кнопка "Озвучить рецепт" (для рецепта 1 — Омлет)
-     - Оба элемента скрыты по умолчанию (visibility=gone), показываются если hasVideo()/hasVoice()
--->
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -109,7 +104,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- ===== НОВОЕ: Блок озвучки (только для рецептов с hasVoice()) ===== -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardVoice"
                 android:layout_width="match_parent"
@@ -150,7 +144,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- ===== НОВОЕ: Блок видео (только для рецептов с hasVideo()) ===== -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardVideo"
                 android:layout_width="match_parent"
@@ -176,7 +169,6 @@
                         android:padding="16dp"
                         android:paddingBottom="8dp"/>
 
-                    <!-- VideoView для воспроизведения видео рецепта -->
                     <VideoView
                         android:id="@+id/videoView"
                         android:layout_width="match_parent"
@@ -185,7 +177,6 @@
                         android:layout_marginEnd="12dp"
                         android:layout_marginBottom="12dp"/>
 
-                    <!-- Кнопки управления видео -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -217,7 +208,41 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Ingredients card -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTimers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timers_section"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginBottom="12dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/timersContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

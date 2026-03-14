@@ -47,10 +47,24 @@
     <string name="back">Назад</string>
     <string name="splash_tagline">Откройте мировые кухни</string>
 
+    <!-- НОВОЕ: аудио/видео UI -->
     <string name="voice_recipe">🎧 Прослушать озвучку рецепта</string>
     <string name="btn_play_voice">▶ Воспроизвести</string>
     <string name="btn_stop_voice">■ Остановить</string>
     <string name="video_recipe">🎬 Видео рецепта</string>
     <string name="btn_video_play">▶ Воспроизвести видео</string>
     <string name="btn_video_stop">■ Остановить</string>
+
+    <!-- НОВОЕ: таймеры -->
+    <string name="timers_section">⏱ Кулинарные таймеры</string>
+    <string name="timer_start">▶ Старт</string>
+    <string name="timer_pause">⏸ Пауза</string>
+    <string name="timer_reset">↺ Сброс</string>
+    <string name="timer_set_minutes">Задать время (мин):</string>
+    <string name="timer_minutes_hint">мин</string>
+    <string name="timer_apply">Применить</string>
+    <string name="timer_omelette_heat">Разогрев сковороды</string>
+    <string name="timer_omelette_fry">Жарка омлета</string>
+    <string name="timer_carbonara_pasta">Варка пасты</string>
+
 </resources>

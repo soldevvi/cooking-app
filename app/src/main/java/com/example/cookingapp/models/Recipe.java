@@ -1,5 +1,8 @@
 package com.example.cookingapp.models;
 
+import java.util.Collections;
+import java.util.List;
+
 public class Recipe {
     public static final String CATEGORY_BREAKFAST = "breakfast";
     public static final String CATEGORY_LUNCH     = "lunch";
@@ -17,13 +20,13 @@ public class Recipe {
 
 
     private String voiceResPrefix;
-
+    private List<TimerConfig> timers;
     private int    videoResId;
 
     public Recipe(int id, String nameKey, String descKey, String category,
                   String timeKey, int servingsKey, String ingredientsKey,
                   String stepsKey, int imageResId,
-                  String voiceResPrefix, int videoResId) {
+                  String voiceResPrefix, int videoResId, List<TimerConfig> timers) {
         this.id             = id;
         this.nameKey        = nameKey;
         this.descKey        = descKey;
@@ -35,6 +38,7 @@ public class Recipe {
         this.imageResId     = imageResId;
         this.voiceResPrefix = voiceResPrefix;
         this.videoResId     = videoResId;
+        this.timers         = timers != null ? timers : Collections.emptyList();
     }
 
     public int    getId()             { return id; }
@@ -56,4 +60,7 @@ public class Recipe {
     public int  getVideoResId()       { return videoResId; }
 
     public boolean hasVideo()         { return videoResId != 0; }
+
+    public List<TimerConfig> getTimers()  { return timers; }
+    public boolean           hasTimers()  { return !timers.isEmpty(); }
 }

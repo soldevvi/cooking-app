@@ -61,4 +61,18 @@
     <string name="video_recipe">🎬 Recipe Video</string>
     <string name="btn_video_play">▶ Play Video</string>
     <string name="btn_video_stop">■ Stop</string>
+
+    <!-- НОВОЕ: таймеры -->
+    <string name="timers_section">⏱ Cooking Timers</string>
+    <string name="timer_start">▶ Start</string>
+    <string name="timer_pause">⏸ Pause</string>
+    <string name="timer_reset">↺ Reset</string>
+    <string name="timer_set_minutes">Set time (min):</string>
+    <string name="timer_minutes_hint">min</string>
+    <string name="timer_apply">Apply</string>
+    <!-- Timer labels -->
+    <string name="timer_omelette_heat">Heat Pan</string>
+    <string name="timer_omelette_fry">Fry Omelette</string>
+    <string name="timer_carbonara_pasta">Boil Pasta</string>
+
 </resources>

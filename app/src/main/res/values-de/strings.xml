@@ -46,11 +46,24 @@
     <string name="back">Zurück</string>
     <string name="splash_tagline">Entdecken Sie Weltküchen</string>
 
-
+    <!-- NEU: Audio/Video UI -->
     <string name="voice_recipe">🎧 Rezept-Vertonung anhören</string>
     <string name="btn_play_voice">▶ Abspielen</string>
     <string name="btn_stop_voice">■ Stoppen</string>
     <string name="video_recipe">🎬 Rezeptvideo</string>
     <string name="btn_video_play">▶ Video abspielen</string>
     <string name="btn_video_stop">■ Stoppen</string>
+
+    <!-- NEU: Timer -->
+    <string name="timers_section">⏱ Koch-Timer</string>
+    <string name="timer_start">▶ Start</string>
+    <string name="timer_pause">⏸ Pause</string>
+    <string name="timer_reset">↺ Reset</string>
+    <string name="timer_set_minutes">Zeit setzen (Min):</string>
+    <string name="timer_minutes_hint">Min</string>
+    <string name="timer_apply">Anwenden</string>
+    <string name="timer_omelette_heat">Pfanne erhitzen</string>
+    <string name="timer_omelette_fry">Omelett braten</string>
+    <string name="timer_carbonara_pasta">Pasta kochen</string>
+
 </resources>
